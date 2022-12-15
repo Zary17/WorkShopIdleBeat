@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{06896F22-5351-DE4E-2C8B-836DE5F0D8E4}</ProjectGuid>
+    <ProjectGuid>{8C2CF1E7-CB4C-6396-8803-06C0B679D1F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,6 +53,7 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ColliderPourPièce.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\AudioManager.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\Pièce.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\proto_MenuScript.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Assets\Proto\Gaétan\Script\truc stylé\AudioSyncer.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ProtoPlayerStats.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ProtoPlayerInteraction.cs" />
-    <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ColliderPourPièce.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
