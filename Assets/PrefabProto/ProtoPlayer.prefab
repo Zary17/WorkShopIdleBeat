@@ -243,19 +243,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dae15c61d9a5544b94a3569394245a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpCut: 0
-  jumpForce: 10
-  bufferTime: 0
-  groundCheck: {fileID: 0}
-  groundCheckRadius: {x: 0, y: 0}
+  jumpCut: 0.56
+  jumpForce: 20
+  bufferTime: 0.048
+  groundCheck: {fileID: 6877239419294250606}
+  groundCheckRadius: {x: 0.1, y: 0.1}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  coyoteTime: 0
-  gravityScale: 0
-  fallGravityMult: 0
-  life: 0
-  isEvil: 1
+  coyoteTime: 0.1
+  gravityScale: 1
+  fallGravityMult: 4
+  life: 3
+  isEvil: 0
   proto_ui: {fileID: 0}
 --- !u!1 &6877239419977393623
 GameObject:
