@@ -401,10 +401,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 139935011}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73192b400c981d469d6a70bad5c0fd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9c42ea6bd74e1e249b1e7dde3aa75766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: fd9d15438e577d84b9fda5a831755d95, type: 2}
+  audioMixer: {fileID: 24100000, guid: 9bfd9c51be6e29b45abdc285dfe11fdf, type: 2}
   GeneraleSlider: {fileID: 677127545}
   MusiqueSlider: {fileID: 2078500181}
   AmbianceSlider: {fileID: 310214465}
@@ -436,60 +436,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 150120793}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37febdc65bac99142a8baf0a48188be9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a38cfbeccd06d746bb6e2595aec9678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
   - name: Menu
     clip:
-    - {fileID: 8300000, guid: 1cf70f6cf9427fe4f90f22f9d928eb2d, type: 3}
-    group: {fileID: -6035544037080830363, guid: fd9d15438e577d84b9fda5a831755d95, type: 2}
+    - {fileID: 8300000, guid: 5434106b1228f754f929eba184204197, type: 3}
+    group: {fileID: -6035544037080830363, guid: 9bfd9c51be6e29b45abdc285dfe11fdf, type: 2}
     volume: 1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Level1
     clip:
-    - {fileID: 8300000, guid: 4b60cedcf990b174bbbce4c9bb02bb24, type: 3}
-    group: {fileID: -6035544037080830363, guid: fd9d15438e577d84b9fda5a831755d95, type: 2}
+    - {fileID: 8300000, guid: 73356a360fd8abd4a92100cfc6cf879e, type: 3}
+    group: {fileID: -6035544037080830363, guid: 9bfd9c51be6e29b45abdc285dfe11fdf, type: 2}
     volume: 1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Frappe
     clip:
-    - {fileID: 8300000, guid: dee170643f26f8845a36f879380bdbef, type: 3}
-    - {fileID: 8300000, guid: cf33ae46b126d77408f7f72527097b37, type: 3}
-    - {fileID: 8300000, guid: 83568241b25a2a941813223f5da5088e, type: 3}
-    - {fileID: 8300000, guid: 986b579c531f3d447bb9b3b6462c6ecf, type: 3}
-    - {fileID: 8300000, guid: 86313137caa31d84b9f060c5126f9ea5, type: 3}
-    - {fileID: 8300000, guid: 7e17d082bd3410f4db95f065b68f4140, type: 3}
-    group: {fileID: -936749614042762528, guid: fd9d15438e577d84b9fda5a831755d95, type: 2}
+    - {fileID: 8300000, guid: dcd2e40959fdf6641afc3ee36cda0c83, type: 3}
+    - {fileID: 8300000, guid: 6a4d4e51ff5446740af46b16b4bc6f5c, type: 3}
+    - {fileID: 8300000, guid: 33e46b8ec010da94a97dff0aaba931bd, type: 3}
+    - {fileID: 8300000, guid: c0807a7506477b54385cd864a24ced08, type: 3}
+    - {fileID: 8300000, guid: 7946f10e9458ca04d94c494450c87377, type: 3}
+    - {fileID: 8300000, guid: ef1664ec3e659a742981ed6eea5cea23, type: 3}
+    group: {fileID: -936749614042762528, guid: 9bfd9c51be6e29b45abdc285dfe11fdf, type: 2}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Ambiance
     clip:
-    - {fileID: 8300000, guid: 74fdfec64d71a4342b23f6f8e62ce3eb, type: 3}
-    group: {fileID: 287449111035476009, guid: fd9d15438e577d84b9fda5a831755d95, type: 2}
+    - {fileID: 8300000, guid: 6968cacb73e3cdd4ba63ea38453c0f5e, type: 3}
+    group: {fileID: 287449111035476009, guid: 9bfd9c51be6e29b45abdc285dfe11fdf, type: 2}
     volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: SwitchGood
     clip:
-    - {fileID: 8300000, guid: c7af55bf90d6a8b48ab66206192714c6, type: 3}
-    group: {fileID: -936749614042762528, guid: fd9d15438e577d84b9fda5a831755d95, type: 2}
+    - {fileID: 8300000, guid: 39115b0495a5fec4bbf5188db38c00f6, type: 3}
+    group: {fileID: -936749614042762528, guid: 9bfd9c51be6e29b45abdc285dfe11fdf, type: 2}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: SwitchEvil
     clip:
-    - {fileID: 8300000, guid: 808dea944bdaf2f43b9ed57502762550, type: 3}
-    group: {fileID: -936749614042762528, guid: fd9d15438e577d84b9fda5a831755d95, type: 2}
-    volume: 1
+    - {fileID: 8300000, guid: 39115b0495a5fec4bbf5188db38c00f6, type: 3}
+    group: {fileID: -936749614042762528, guid: 9bfd9c51be6e29b45abdc285dfe11fdf, type: 2}
+    volume: 0.6
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -2512,7 +2512,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 881675378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d090e7ffadfb46a44b244e47e76abee7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c084346529ab724a98b99fad4138973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Options: {fileID: 139935011}
@@ -5625,10 +5625,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1247221956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d56d2986e6cbb34cb2a98fedb738332, type: 3}
+  m_Script: {fileID: 11500000, guid: a94d2f8d352cb8940ad07ed95b43c094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentTransformCheckPoint: {fileID: 0}
+  _currentTransformCheckPoint: 0
+  currentTimer: 0
 --- !u!4 &1247221958
 Transform:
   m_ObjectHideFlags: 0
@@ -5822,7 +5823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: f845fcdfc1a288841b6eb5e7a3762e0e, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: fe478099882066344823d543d1dec93c, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
