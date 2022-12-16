@@ -79,6 +79,7 @@
     <Compile Include="Assets\Proto\Gaétan\Script\truc stylé\AudioSyncer.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ProtoPlayerStats.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ProtoPlayerInteraction.cs" />
+    <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\HitBoxInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

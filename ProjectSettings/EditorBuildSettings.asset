@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: "Assets/Proto/Ga\xE9tan/scene/proto_menu.unity"
+    guid: fb4f50ab78fe10048872595d2ffac08c
+  - enabled: 1
+    path: "Assets/Proto/Ga\xE9tan/scene/LD1.unity"
+    guid: acba427c3fc56394d946a61888a47dcd
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: "Assets/Proto/Ga\xE9tan/scene/proto_Light.unity"
+    guid: d1fd6c4fd7c08174f804989ed96ee964
   m_configObjects: {}

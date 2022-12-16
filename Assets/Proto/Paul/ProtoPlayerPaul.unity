@@ -847,6 +847,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 805b4a1582aad204fb2f97b4e3f0cce2, type: 2}
+    - target: {fileID: 6877239419977393623, guid: 9e517e4d131e99945a9be09e5a821fce, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 6877239420416818721, guid: 9e517e4d131e99945a9be09e5a821fce, type: 3}
       propertyPath: m_Name
       value: ProtoPlayer
@@ -895,6 +899,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1178152186482944997, guid: 9e517e4d131e99945a9be09e5a821fce, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e517e4d131e99945a9be09e5a821fce, type: 3}

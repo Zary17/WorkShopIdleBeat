@@ -9,6 +9,8 @@ public class Fan : MonoBehaviour
         //Fonctionne mais besoin de faire jouer l'animation et ensuite détruire l'objet.
         GetComponent<Animator>().SetTrigger("takeAttack");
         GetComponentInChildren<Animator>().SetBool("takeAttack", true);
+
+        Debug.Log("Fan activé");
     }
 
     public void DestroyObject()

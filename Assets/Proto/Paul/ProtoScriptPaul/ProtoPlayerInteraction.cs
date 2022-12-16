@@ -7,15 +7,15 @@ public class ProtoPlayerInteraction : MonoBehaviour
 {
     //------ATTACK-----//
     [Header("Attack")]
-    [SerializeField] bool canInteraction;
+    [SerializeField] public bool canInteraction;
+    [SerializeField] public int canInteractionInt;
     public bool isOnClick;
 
     //Collectable qui peut etre ramassé.
-    [SerializeField] Collider2D collectable;
+    [SerializeField] public Collider2D collectable;
 
     //
     ProtoPlayer protoPlayer;
-
 
     AudioManager _audioManager;
 
@@ -24,6 +24,14 @@ public class ProtoPlayerInteraction : MonoBehaviour
         protoPlayer = FindObjectOfType<ProtoPlayer>();
         _audioManager = FindObjectOfType<AudioManager>();
     }
+
+    /*private void Update()
+    {
+        if (canInteractionInt > 0)
+        {
+            canInteraction = true;
+        }
+    }*/
 
     public void Interaction(InputAction.CallbackContext ctx)
     {
@@ -48,11 +56,15 @@ public class ProtoPlayerInteraction : MonoBehaviour
 
                 activeObject(collectable);
 
-                _audioManager.Play("Frappe");
+                //_audioManager.Play("Frappe");
 
-                GetComponentInParent<Animator>().SetTrigger("isAttack");
+                //GetComponentInParent<Animator>().SetBool("isAttack", true);
 
                 Debug.Log("ObjetDetruit");
+            }
+            else
+            {
+                //GetComponentInParent<Animator>().SetBool("isAttack", false);
             }
 
             Debug.Log("Interaction Perform !");
@@ -60,7 +72,7 @@ public class ProtoPlayerInteraction : MonoBehaviour
     }
 
     //Detecte les objets.
-    private void OnTriggerEnter2D(Collider2D collision)
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy") || collision.CompareTag("Slider"))
         {
@@ -83,14 +95,14 @@ public class ProtoPlayerInteraction : MonoBehaviour
         ResetCombo();
 
         Debug.Log("TriggerExit2D");
-    }
+    }*/
 
     void ComboAndScore()
     {
         GetComponentInParent<ProtoPlayerStats>().AddComboAndScore();
     }
 
-    void ResetCombo()
+    public void ResetCombo()
     {
         GetComponentInParent<ProtoPlayerStats>().ResetAddComboAndScore();
     }
@@ -111,6 +123,28 @@ public class ProtoPlayerInteraction : MonoBehaviour
             Debug.Log("Animation activée");
         }
 
+        switch (canInteractionInt)
+        {
+            case 1:
+                ComboGood();
+                Debug.Log("Good");
+                break;
+            case 2:
+                ComboPerfect();
+                Debug.Log("Perfect");
+                break;
+        }
+
         Debug.Log("activeOject");
+    }
+
+    void ComboGood()
+    {
+
+    }
+
+    void ComboPerfect()
+    {
+
     }
 }

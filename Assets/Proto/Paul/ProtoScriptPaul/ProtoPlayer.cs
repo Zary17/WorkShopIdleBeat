@@ -137,12 +137,14 @@ public class ProtoPlayer : MonoBehaviour
         if (IsJumping && isGrounded)
         {
             IsJumping = false;
+            GetComponent<Animator>().SetBool("GentilleJump", false);
         }
 
         if (CanJump() && LastPressedJumpTime > 0)
         {
 
             IsJumping = true;
+            GetComponent<Animator>().SetBool("GentilleJump", true);
             JumpAcction();
         }
 
