@@ -134,6 +134,11 @@ public class ProtoPlayer : MonoBehaviour
 
         if (Physics2D.OverlapBox(groundCheck.position, groundCheckRadius, 0, groundLayer))//checks if set box overlaps with ground
         {
+            if (!isGrounded)
+            {
+                GetComponent<Animator>().SetBool("GentilleJump", false);  
+
+            }
             isGrounded = true;
             LastOnGroundTime = coyoteTime;
         }
@@ -144,7 +149,6 @@ public class ProtoPlayer : MonoBehaviour
 
         if (IsJumping && isGrounded)
         {
-            GetComponent<Animator>().SetBool("GentilleJump", false);
             IsJumping = false;
         }
 

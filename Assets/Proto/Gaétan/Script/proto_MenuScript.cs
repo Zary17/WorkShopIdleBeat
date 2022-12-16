@@ -22,6 +22,9 @@ public class proto_MenuScript : MonoBehaviour
 
     AudioManager audioManager;
 
+
+    [SerializeField] GameObject Credit,creditButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +75,7 @@ public class proto_MenuScript : MonoBehaviour
         inOption = false;
         Menu.SetActive(true);
         Options.SetActive(false);
+        Credit.SetActive(false);
 
         EventSystem.current.SetSelectedGameObject(lastSelected);
 
@@ -91,8 +95,12 @@ public class proto_MenuScript : MonoBehaviour
 
     public void CreditGame()
     {
-        //SceneManager.LoadScene("Credit2");
-        inOption = true;
+        Credit.SetActive(true);
+        Menu.SetActive(false);
+        inOption = true; ;
+        lastSelected = EventSystem.current.currentSelectedGameObject;
+
+        EventSystem.current.SetSelectedGameObject(creditButton);
     }
 
 

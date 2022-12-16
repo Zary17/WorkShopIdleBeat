@@ -54,6 +54,7 @@ public class proto_PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         CreditUI.gameObject.SetActive(true);
+        lastSelected = EventSystem.current.currentSelectedGameObject;
         EventSystem.current.SetSelectedGameObject(creditFirtButton);
     }
 

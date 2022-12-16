@@ -83,7 +83,7 @@ public class proto_UI : MonoBehaviour
     {
         postGame.SetActive(true);
         EventSystem.current.SetSelectedGameObject(buttonToPost);
-        UpdateUI()
+
     }
     
     

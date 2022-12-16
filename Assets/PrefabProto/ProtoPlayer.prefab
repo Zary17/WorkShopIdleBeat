@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c132e5fa40925b48a577efa1a437b67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  protoPlayerStats: {fileID: 0}
 --- !u!1 &3111324613979669676
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 748c8f672ff024b45a9ed0357dde9000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canInteraction: 1
+  canInteraction: 0
   canInteractionInt: 0
   isOnClick: 0
   collectable: {fileID: 0}
@@ -705,6 +706,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c261fe6e4d5384481acaa04e15e84e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  combo: 0
 --- !u!1 &8626660119103529127
 GameObject:
   m_ObjectHideFlags: 0

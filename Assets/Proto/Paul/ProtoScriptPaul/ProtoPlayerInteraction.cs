@@ -41,13 +41,15 @@ public class ProtoPlayerInteraction : MonoBehaviour
         if (ctx.performed)
         {
             isOnClick = true;
-
             if (canInteraction && protoPlayer.isEvil)
             {
 
                 activeObject(collectable);
 
-                _audioManager.Play("Frappe");
+                protoPlayer.gameObject.GetComponent<Animator>().SetTrigger("isAttack");
+
+
+                //_audioManager.Play("Frappe");
 
                 //GetComponentInParent<Animator>().SetBool("isAttack", true);
 
@@ -60,6 +62,7 @@ public class ProtoPlayerInteraction : MonoBehaviour
 
             Debug.Log("Interaction Perform !");
         }
+   
     }
 
     //Detecte les objets.
@@ -88,6 +91,7 @@ public class ProtoPlayerInteraction : MonoBehaviour
         Debug.Log("TriggerExit2D");
     }*/
 
+        
     void ComboAndScore(int addCombo)
     {
         GetComponentInParent<ProtoPlayerStats>().AddComboAndScore(addCombo);
@@ -101,9 +105,9 @@ public class ProtoPlayerInteraction : MonoBehaviour
     public void activeObject(Collider2D collectable)
     {
         //Pour activer la fonction de l'objet.
-        if (collectable.GetComponentInChildren<Fan>())
+        if (collectable.GetComponent<Fan>())
         {
-            collectable.GetComponentInChildren<Fan>().activeObject();
+            collectable.GetComponent<Fan>().activeObject();
         }
         
         //Pour le slider. Si le joueur arrete d'appuyer, il desactive et détrui l'objet. (A TESTER)
