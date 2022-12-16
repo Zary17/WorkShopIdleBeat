@@ -74,8 +74,9 @@ public class ProtoPlayer : MonoBehaviour
 
 
     [SerializeField] Camera mainCam;
+    [SerializeField] ProtoPlayerInteraction interact;
 
-
+     [SerializeField] Animator VFX;
 
     // Start is called before the first frame update
     void Start()
@@ -86,7 +87,6 @@ public class ProtoPlayer : MonoBehaviour
 
         scroll = FindObjectsOfType<ScrollingBackGround>();
         _audioManager = FindObjectOfType<AudioManager>();
-
     }
 
     private void FixedUpdate()
@@ -180,7 +180,7 @@ public class ProtoPlayer : MonoBehaviour
 
 
 
-        if (ctx.started && !IsJumping && isGrounded)
+        if (ctx.started && !IsJumping && isGrounded && !isEvil)
         {
             LastPressedJumpTime = bufferTime;
             GetComponent<Animator>().SetBool("GentilleJump", true);
@@ -279,13 +279,15 @@ public class ProtoPlayer : MonoBehaviour
 
         if (isEvil)
         {
-            GetComponentInChildren<Animator>().SetTrigger("GoodVersEvil");
-            _audioManager.Play("SwitchEvil");
+            VFX.SetTrigger("GoodVersEvil");
+            //GetComponentInChildren<Animator>().SetTrigger("EvilVersGood");
+            _audioManager.Play("SwitchGood");
         }
         else
         {
-            GetComponentInChildren<Animator>().SetTrigger("EvilVersGood");
-            _audioManager.Play("SwitchGood");
+            VFX.SetTrigger("EvilVersGood");
+            //GetComponentInChildren<Animator>().SetTrigger("GoodVersEvil");
+            _audioManager.Play("SwitchEvil");
         }
 
         proto_ui.ChangeUI(isEvil);
@@ -319,7 +321,7 @@ public class ProtoPlayer : MonoBehaviour
 
             collision.transform.GetComponent<Fan>().DestroyObject();
 
-            GetComponent<ProtoPlayerInteraction>().ResetCombo();
+            interact.ResetCombo();
 
             if (life == 0)
             {
@@ -348,12 +350,6 @@ public class ProtoPlayer : MonoBehaviour
             Debug.Log("Pièce ramassé");
         }
 
-        if (collision.transform.CompareTag("Switch"))
-        {
-            Switch();
-
-            //Debug.Log("Switch");
-        }
 
         if (collision.transform.CompareTag("Finish"))
         {
@@ -362,6 +358,21 @@ public class ProtoPlayer : MonoBehaviour
             //Debug.Log("Switch");
         }
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.CompareTag("Switch"))
+        {
+            Switch();
+
+            //Debug.Log("Switch");
+        }
+        
+    }
+
+
+
 
     //
     /*private void OnTriggerEnter2D(Collider2D collision)
@@ -413,5 +424,5 @@ public class ProtoPlayer : MonoBehaviour
     }*/
 
 
-   
+
 }

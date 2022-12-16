@@ -12,6 +12,17 @@ public class SliderInteraction : MonoBehaviour
     //
     ProtoPlayerStats protoPlayerStats;
 
+
+
+    ProtoPlayerStats stats;
+
+
+    private void Start()
+    {
+        stats = FindObjectOfType<ProtoPlayerStats>();
+    }
+
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && collision.GetComponent<ProtoPlayerInteraction>().isOnClick == false)
@@ -39,7 +50,7 @@ public class SliderInteraction : MonoBehaviour
                 currentTimer = timer;
 
                 //Ajouter le combo tous les X temps
-                protoPlayerStats.GetComponent<ProtoPlayerStats>().AddComboAndScore(1);
+                protoPlayerStats.AddComboAndScore(1);
             }
         }
     }
