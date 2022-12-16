@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 947014100991930906, guid: ea69a2bad94367447a1cbce00641a2b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 947014100991930907, guid: ea69a2bad94367447a1cbce00641a2b2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -57,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 947014100991930911, guid: ea69a2bad94367447a1cbce00641a2b2, type: 3}
       propertyPath: m_Name
-      value: "Pi\xE8ceEvil"
+      value: "Pi\xE8ceEvil Variant"
       objectReference: {fileID: 0}
     - target: {fileID: 7818815082399919451, guid: ea69a2bad94367447a1cbce00641a2b2, type: 3}
       propertyPath: m_Size.x

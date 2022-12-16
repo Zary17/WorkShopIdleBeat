@@ -60,6 +60,7 @@
     <Compile Include="Assets\Proto\Gaétan\Script\GameManager.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\ScrollingBackGround.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\proto_SliderMenu.cs" />
+    <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\HitBoxInfo1.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\truc stylé\AudioSyncColor.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\truc stylé\AudioSyncScale.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ProtoPlayer.cs" />
@@ -79,7 +80,7 @@
     <Compile Include="Assets\Proto\Gaétan\Script\truc stylé\AudioSyncer.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ProtoPlayerStats.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ProtoPlayerInteraction.cs" />
-    <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\HitBoxInfo.cs" />
+    <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\HitBoxInfo2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

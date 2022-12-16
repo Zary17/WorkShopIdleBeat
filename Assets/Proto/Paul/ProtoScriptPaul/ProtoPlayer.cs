@@ -291,11 +291,65 @@ public class ProtoPlayer : MonoBehaviour
         GetComponentInParent<Animator>().SetBool("isEvil", isEvil);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    //A tester
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.CompareTag("Checkpoint"))
+        {
+            //protoGameManager.GetInfo(collision.transform, 1f /*Changer la valeur à la main*/);
+
+            collision.transform.GetComponent<proto_CheckPoint>().SendData();
+
+            Debug.Log("New Checkpoint");
+        }
+
+        if (collision.transform.CompareTag("Enemy"))
+        {
+            life -= 1;
+
+            collision.transform.GetComponent<Fan>().DestroyObject();
+
+            GetComponent<ProtoPlayerInteraction>().ResetCombo();
+
+            if (life == 0)
+            {
+                protoGameManager.OnDeath();
+
+                life = 3;
+            }
+
+            Debug.Log("Enemy contact");
+        }
+
+        if (collision.transform.CompareTag("Trou"))
+        {
+            protoGameManager.Respawn();
+
+            Debug.Log("Perso tombé");
+        }
+
+        if (collision.transform.CompareTag("Pièce"))
+        {
+            //
+            collision.transform.GetComponent<Pièce>().activeObject();
+
+            Debug.Log("Pièce ramassé");
+        }
+
+        if (collision.transform.CompareTag("Switch"))
+        {
+            Switch();
+
+            //Debug.Log("Switch");
+        }
+    }
+
+    //
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Checkpoint"))
         {
-            //protoGameManager.GetInfo(collision.transform, 1f /*Changer la valeur à la main*/);
+            //protoGameManager.GetInfo(collision.transform, 1f Changer la valeur à la main);
 
             collision.GetComponent<proto_CheckPoint>().SendData();
 
@@ -337,7 +391,7 @@ public class ProtoPlayer : MonoBehaviour
 
             //Debug.Log("Switch");
         }
-    }
+    }*/
 
 
    

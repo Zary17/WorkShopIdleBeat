@@ -602,6 +602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3860835857970866377, guid: 39ad180090627414c857430a70dbfbb9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39ad180090627414c857430a70dbfbb9, type: 3}
 --- !u!1001 &5142130321171363629
@@ -784,7 +788,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4580907427565836289, guid: 1efb28954b90b3d4cadf05b1ca3f5624, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6788294228104677189, guid: 1efb28954b90b3d4cadf05b1ca3f5624, type: 3}
       propertyPath: m_Name
@@ -843,6 +847,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1802067056}
     m_Modifications:
+    - target: {fileID: 629282679145381494, guid: 9e517e4d131e99945a9be09e5a821fce, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6877239419517199421, guid: 9e517e4d131e99945a9be09e5a821fce, type: 3}
       propertyPath: m_Controller
       value: 
@@ -898,6 +906,14 @@ PrefabInstance:
     - target: {fileID: 6877239420416818723, guid: 9e517e4d131e99945a9be09e5a821fce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202759630634050836, guid: 9e517e4d131e99945a9be09e5a821fce, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744906279735556238, guid: 9e517e4d131e99945a9be09e5a821fce, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e517e4d131e99945a9be09e5a821fce, type: 3}

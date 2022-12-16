@@ -39,7 +39,7 @@ public class SliderInteraction : MonoBehaviour
                 currentTimer = timer;
 
                 //Ajouter le combo tous les X temps
-                protoPlayerStats.GetComponent<ProtoPlayerStats>().AddComboAndScore();
+                protoPlayerStats.GetComponent<ProtoPlayerStats>().AddComboAndScore(1);
             }
         }
     }

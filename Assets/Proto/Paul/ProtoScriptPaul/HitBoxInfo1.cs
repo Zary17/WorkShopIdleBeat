@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitBoxInfo : MonoBehaviour
+public class HitBoxInfo1 : MonoBehaviour
 {
     //Detecte les objets.
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,10 +24,6 @@ public class HitBoxInfo : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         GetComponentInParent<ProtoPlayerInteraction>().canInteractionInt -= 1;
-
-        GetComponentInParent<ProtoPlayerInteraction>().collectable = null;
-
-        GetComponentInParent<ProtoPlayerInteraction>().ResetCombo();
 
         Debug.Log("TriggerExit2D");
 

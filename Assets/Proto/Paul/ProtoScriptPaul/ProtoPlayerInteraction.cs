@@ -25,14 +25,6 @@ public class ProtoPlayerInteraction : MonoBehaviour
         _audioManager = FindObjectOfType<AudioManager>();
     }
 
-    /*private void Update()
-    {
-        if (canInteractionInt > 0)
-        {
-            canInteraction = true;
-        }
-    }*/
-
     public void Interaction(InputAction.CallbackContext ctx)
     {
 
@@ -52,7 +44,6 @@ public class ProtoPlayerInteraction : MonoBehaviour
 
             if (canInteraction && protoPlayer.isEvil)
             {
-                ComboAndScore();
 
                 activeObject(collectable);
 
@@ -97,9 +88,9 @@ public class ProtoPlayerInteraction : MonoBehaviour
         Debug.Log("TriggerExit2D");
     }*/
 
-    void ComboAndScore()
+    void ComboAndScore(int addCombo)
     {
-        GetComponentInParent<ProtoPlayerStats>().AddComboAndScore();
+        GetComponentInParent<ProtoPlayerStats>().AddComboAndScore(addCombo);
     }
 
     public void ResetCombo()
@@ -126,25 +117,15 @@ public class ProtoPlayerInteraction : MonoBehaviour
         switch (canInteractionInt)
         {
             case 1:
-                ComboGood();
+                ComboAndScore(1);
                 Debug.Log("Good");
                 break;
             case 2:
-                ComboPerfect();
+                ComboAndScore(2);
                 Debug.Log("Perfect");
                 break;
         }
 
         Debug.Log("activeOject");
-    }
-
-    void ComboGood()
-    {
-
-    }
-
-    void ComboPerfect()
-    {
-
     }
 }

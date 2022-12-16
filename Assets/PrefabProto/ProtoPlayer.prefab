@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453426502219534779}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 6877239419977393616}
@@ -94,7 +94,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -164,7 +164,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 2394398177945820579}
   - component: {fileID: 2957777191714440774}
   - component: {fileID: 7744906279735556238}
-  - component: {fileID: 2906434604660257694}
+  - component: {fileID: 2841658333664942022}
   m_Layer: 0
   m_Name: Hitbox2
   m_TagString: Untagged
@@ -219,7 +219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3111324613979669676}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.75, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 6877239419977393616}
@@ -286,7 +286,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -302,7 +302,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2906434604660257694
+--- !u!114 &2841658333664942022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3111324613979669676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 466c1e5ae9737f74991bd05fa4128e6f, type: 3}
+  m_Script: {fileID: 11500000, guid: b8f48592353865b4285ee106943b43ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &6877239419294250605
@@ -487,18 +487,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dae15c61d9a5544b94a3569394245a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpCut: 0
-  jumpForce: 10
-  bufferTime: 0
+  jumpCut: 0.56
+  jumpForce: 20
+  bufferTime: 0.048
   groundCheck: {fileID: 6877239419294250606}
   groundCheckRadius: {x: 1, y: 1}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  coyoteTime: 0
-  gravityScale: 0
-  fallGravityMult: 0
-  life: 0
+  coyoteTime: 0.1
+  gravityScale: 4
+  fallGravityMult: 1
+  life: 3
   isEvil: 1
   proto_ui: {fileID: 0}
 --- !u!1 &6877239419977393623
@@ -510,7 +510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6877239419977393616}
-  - component: {fileID: 6877239419977393618}
+  - component: {fileID: 323558092137471060}
   m_Layer: 0
   m_Name: Attaque
   m_TagString: Untagged
@@ -534,7 +534,7 @@ Transform:
   m_Father: {fileID: 6877239420416818723}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6877239419977393618
+--- !u!114 &323558092137471060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,7 +651,7 @@ MonoBehaviour:
     m_ActionName: ProtoPlayer/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6877239419977393618}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ProtoPlayerInteraction, Assembly-CSharp
         m_MethodName: Interaction
         m_Mode: 0

@@ -15,9 +15,9 @@ public class ProtoPlayerStats : MonoBehaviour
     int nbPièces;
     int nbFan;
 
-    public void AddComboAndScore()
+    public void AddComboAndScore(int addcombo)
     {
-        combo += 1;
+        combo += addcombo;
         score += 1 * combo;
 
         //Si le combo est plus grand que le comboMax, alors go le mettre à jour.

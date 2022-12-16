@@ -14,8 +14,6 @@ public class proto_MenuScript : MonoBehaviour
 
     [SerializeField] GameObject menuFirstButton, optionsFirstButton;
 
-    [SerializeField] GameObject splashcreen;
-
     GameObject lastSelected;
 
     bool inOption;
@@ -97,10 +95,7 @@ public class proto_MenuScript : MonoBehaviour
     }
 
 
-    public void SplashScreen()
-    {
-        splashcreen.SetActive(false);
-    }
+
 
 
 
