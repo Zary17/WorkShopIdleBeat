@@ -63,7 +63,7 @@ public class SliderInteraction : MonoBehaviour
     void desactiveObject()
     {
         GetComponent<Animator>().SetBool("isOnClick", false);
-        protoPlayerStats.GetComponent<ProtoPlayerStats>().ResetAddComboAndScore();
+        protoPlayerStats.ResetAddComboAndScore();
         Destroy(gameObject);
     }
 }
