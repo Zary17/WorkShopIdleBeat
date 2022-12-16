@@ -70,7 +70,7 @@ public class proto_UI : MonoBehaviour
 
     public void TakeDamage()
     {
-        CoeurVide.fillAmount += 0.33f ;
+        CoeurVide.fillAmount += 1/3f ;
     }
 
 

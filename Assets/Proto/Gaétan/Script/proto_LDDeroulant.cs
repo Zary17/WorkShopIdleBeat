@@ -30,8 +30,8 @@ public class proto_LDDeroulant : MonoBehaviour
         if (ctx.performed)
         {
             Debug.Log(source.time);
-            source.time = 102.6933f;
-            transform.position = new Vector3(-1035.674f, transform.position.y,transform.position.z);
+            source.time = 142.592f;
+            transform.position = new Vector3(-1436.834f, transform.position.y,transform.position.z);
         }
     }
 

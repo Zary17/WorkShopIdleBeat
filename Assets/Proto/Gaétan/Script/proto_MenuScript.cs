@@ -14,6 +14,8 @@ public class proto_MenuScript : MonoBehaviour
 
     [SerializeField] GameObject menuFirstButton, optionsFirstButton;
 
+    [SerializeField] GameObject splashcreen;
+
     GameObject lastSelected;
 
     bool inOption;
@@ -25,8 +27,7 @@ public class proto_MenuScript : MonoBehaviour
     {
         audioManager = FindObjectOfType<AudioManager>();
 
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(menuFirstButton);
+        //EventSystem.current.SetSelectedGameObject(menuFirstButton);
 
     }
 
@@ -95,7 +96,12 @@ public class proto_MenuScript : MonoBehaviour
     }
 
 
-
+    public void SplashScreen()
+    {
+        splashcreen.SetActive(false);
+        Menu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(menuFirstButton);
+    }
 
 
 

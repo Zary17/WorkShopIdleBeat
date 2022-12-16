@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Slider
   - Trou
+  - Finsih
   layers:
   - Default
   - TransparentFX
