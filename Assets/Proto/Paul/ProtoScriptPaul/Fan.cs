@@ -5,19 +5,18 @@ using UnityEngine;
 public class Fan : MonoBehaviour
 {
     [SerializeField] Animator vfx;
+    [SerializeField] GameObject Parent;
     public void activeObject()
     {
         //Fonctionne mais besoin de faire jouer l'animation et ensuite détruire l'objet.
-        //GetComponent<Animator>().SetTrigger("takeAttack");
+        GetComponent<Animator>().SetTrigger("takeAttack");
         vfx.SetTrigger("takeAttack");
-        Invoke("DestroyObject", 0.1f);
-
-        Debug.Log("Fan activé");
-        //DestroyObject();
     }
 
     public void DestroyObject()
     {
-        Destroy(gameObject);
+        Destroy(Parent);
+
+        Debug.Log("Fan Destroy");
     }
 }

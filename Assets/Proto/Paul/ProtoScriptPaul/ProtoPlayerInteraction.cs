@@ -47,7 +47,7 @@ public class ProtoPlayerInteraction : MonoBehaviour
 
                 activeObject(collectable);
 
-                //_audioManager.Play("Frappe");
+                _audioManager.Play("Frappe");
 
                 //GetComponentInParent<Animator>().SetBool("isAttack", true);
 
@@ -101,9 +101,9 @@ public class ProtoPlayerInteraction : MonoBehaviour
     public void activeObject(Collider2D collectable)
     {
         //Pour activer la fonction de l'objet.
-        if (collectable.GetComponent<Fan>())
+        if (collectable.GetComponentInChildren<Fan>())
         {
-            collectable.GetComponent<Fan>().activeObject();
+            collectable.GetComponentInChildren<Fan>().activeObject();
         }
         
         //Pour le slider. Si le joueur arrete d'appuyer, il desactive et détrui l'objet. (A TESTER)

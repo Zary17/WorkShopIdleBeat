@@ -654,7 +654,7 @@ MonoBehaviour:
     m_ActionName: ProtoPlayer/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 323558092137471060}
         m_TargetAssemblyTypeName: ProtoPlayerInteraction, Assembly-CSharp
         m_MethodName: Interaction
         m_Mode: 0
