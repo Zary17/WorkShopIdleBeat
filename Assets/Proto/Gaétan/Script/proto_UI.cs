@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -24,6 +25,9 @@ public class proto_UI : MonoBehaviour
     [SerializeField] Image CoeurVide;
     AudioManager _audioManager;
     int currentScene;
+
+    [SerializeField] GameObject postGame,buttonToPost;
+    [SerializeField] GameObject GameOver,buttonToOver;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,7 +77,18 @@ public class proto_UI : MonoBehaviour
         CoeurVide.fillAmount += 1/3f ;
     }
 
-
+    public void Win()
+    {
+        postGame.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(buttonToPost);
+    }
+    
+    
+    public void Loose()
+    {
+        GameOver.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(buttonToOver);
+    }
 
 
 

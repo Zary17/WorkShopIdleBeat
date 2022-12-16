@@ -15,7 +15,7 @@ public class proto_PauseMenu : MonoBehaviour
     [SerializeField] proto_Options options;
     bool inOption=false;
 
-
+    AudioManager audioManager;
 
     public void Pause()
     {
@@ -82,8 +82,11 @@ public class proto_PauseMenu : MonoBehaviour
 
     public void GoMenu()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+        audioManager.Stop("Ambiance");
+        audioManager.Play("Menu");
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(0);
     }
 
 

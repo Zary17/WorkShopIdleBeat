@@ -112,6 +112,23 @@ public class AudioManager : MonoBehaviour
     }
 
 
+    public void Stop(string name)
+    {
+
+
+
+        Sound p = System.Array.Find(sounds, sound => sound.name == name);
+        p.source.clip = p.clip[Random.Range(0, p.clip.Length)];
+        if (p == null)
+        {
+            Debug.LogWarning("Il n'y a pas de clip ayant " + name + "comme nom!");
+            return;
+
+        }
+        p.source.Stop();
+    }
+
+
 
 
 

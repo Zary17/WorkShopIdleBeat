@@ -73,6 +73,8 @@ public class ProtoPlayer : MonoBehaviour
     #endregion
 
 
+    [SerializeField] Camera mainCam;
+
 
 
     // Start is called before the first frame update
@@ -84,6 +86,7 @@ public class ProtoPlayer : MonoBehaviour
 
         scroll = FindObjectsOfType<ScrollingBackGround>();
         _audioManager = FindObjectOfType<AudioManager>();
+
     }
 
     private void FixedUpdate()
@@ -136,15 +139,15 @@ public class ProtoPlayer : MonoBehaviour
 
         if (IsJumping && isGrounded)
         {
-            IsJumping = false;
             GetComponent<Animator>().SetBool("GentilleJump", false);
+            IsJumping = false;
         }
 
         if (CanJump() && LastPressedJumpTime > 0)
         {
 
             IsJumping = true;
-            GetComponent<Animator>().SetBool("GentilleJump", true);
+            
             JumpAcction();
         }
 
@@ -180,6 +183,7 @@ public class ProtoPlayer : MonoBehaviour
         if (ctx.started && !IsJumping && isGrounded)
         {
             LastPressedJumpTime = bufferTime;
+            GetComponent<Animator>().SetBool("GentilleJump", true);
 
         }
 
@@ -258,7 +262,13 @@ public class ProtoPlayer : MonoBehaviour
 
 
 
+    public void PostGameEffect()
+    {
+        mainCam.orthographicSize = 3;
+        mainCam.transform.position = new Vector3(-5, -1.5f,-10);
 
+        proto_ui.Win();
+    }
 
 
 
@@ -315,6 +325,8 @@ public class ProtoPlayer : MonoBehaviour
             {
                 protoGameManager.OnDeath();
 
+                proto_ui.TakeDamage();
+
                 life = 3;
             }
 
@@ -339,6 +351,13 @@ public class ProtoPlayer : MonoBehaviour
         if (collision.transform.CompareTag("Switch"))
         {
             Switch();
+
+            //Debug.Log("Switch");
+        }
+
+        if (collision.transform.CompareTag("Finish"))
+        {
+            PostGameEffect();
 
             //Debug.Log("Switch");
         }

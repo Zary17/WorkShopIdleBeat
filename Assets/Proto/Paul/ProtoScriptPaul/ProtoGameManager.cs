@@ -19,12 +19,14 @@ public class ProtoGameManager : MonoBehaviour
     [SerializeField] float currentTimer;
     bool canCount=false;
     //
-    int tryRemaning;
+    int tryRemaning=3;
 
 
     float speedLD;
 
     ScrollingBackGround[] allScrollingBackGround;
+
+    proto_UI ui;
 
 
     //ratio
@@ -98,7 +100,6 @@ public class ProtoGameManager : MonoBehaviour
 
 
 
-
         foreach(ScrollingBackGround scroll in allScrollingBackGround)
         {
             scroll.StopBackGround();
@@ -111,6 +112,11 @@ public class ProtoGameManager : MonoBehaviour
         ld.changeSpeed();
 
 
+        if (tryRemaning <= 0)
+        {
+            GameOver();
+            return;
+        }
 
 
 
@@ -118,6 +124,15 @@ public class ProtoGameManager : MonoBehaviour
 
         Invoke("Respawn", 2);
     }
+
+
+
+    public void GameOver()
+    {
+        ui = FindObjectOfType<proto_UI>();
+        ui.Loose();
+    }
+
 
 
 
