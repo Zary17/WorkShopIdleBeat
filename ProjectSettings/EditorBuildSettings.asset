@@ -5,16 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: "Assets/Proto/Ga\xE9tan/scene/proto_menu.unity"
-    guid: fb4f50ab78fe10048872595d2ffac08c
+    guid: 54ec99a782acc6449ad0288a6cadaf06
   - enabled: 1
     path: "Assets/Proto/Ga\xE9tan/scene/LD1.unity"
-    guid: acba427c3fc56394d946a61888a47dcd
-  - enabled: 0
-    path: "Assets/Proto/Ga\xE9tan/scene/proto_Light.unity"
-    guid: d1fd6c4fd7c08174f804989ed96ee964
+    guid: 5097222363c1c154b8c8420c88652c01
   m_configObjects: {}
