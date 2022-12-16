@@ -58,6 +58,7 @@
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\Pièce.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\proto_MenuScript.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\GameManager.cs" />
+    <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\HitBoxInfo2.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\ScrollingBackGround.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\proto_SliderMenu.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\HitBoxInfo1.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\Proto\Gaétan\Script\proto_UI.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\proto_LDDeroulant.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\truc stylé\premier test\GetAudioSpectrum.cs" />
+    <Compile Include="Assets\Proto\Gaétan\Script\PostGame.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ProtoGameManager.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\Fan.cs" />
     <Compile Include="Assets\Proto\Gaétan\Script\CheckPoint\proto_CheckPoint.cs" />
@@ -80,7 +82,6 @@
     <Compile Include="Assets\Proto\Gaétan\Script\truc stylé\AudioSyncer.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ProtoPlayerStats.cs" />
     <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\ProtoPlayerInteraction.cs" />
-    <Compile Include="Assets\Proto\Paul\ProtoScriptPaul\HitBoxInfo2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
