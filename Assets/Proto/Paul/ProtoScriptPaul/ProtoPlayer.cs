@@ -78,6 +78,9 @@ public class ProtoPlayer : MonoBehaviour
 
      [SerializeField] Animator VFX;
 
+
+    ProtoPlayerStats stats;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -87,6 +90,8 @@ public class ProtoPlayer : MonoBehaviour
 
         scroll = FindObjectsOfType<ScrollingBackGround>();
         _audioManager = FindObjectOfType<AudioManager>();
+
+        stats = GetComponentInParent<ProtoPlayerStats>();
     }
 
     private void FixedUpdate()
@@ -329,6 +334,9 @@ public class ProtoPlayer : MonoBehaviour
 
                 proto_ui.TakeDamage();
 
+                int score;
+                score = stats.SendScore();
+
                 life = 3;
             }
 
@@ -342,18 +350,18 @@ public class ProtoPlayer : MonoBehaviour
             Debug.Log("Perso tombé");
         }
 
-        if (collision.transform.CompareTag("Pièce"))
-        {
-            //
-            collision.transform.GetComponent<Pièce>().activeObject();
-
-            Debug.Log("Pièce ramassé");
-        }
+       
 
 
-        if (collision.transform.CompareTag("Finish"))
+        if (collision.transform.CompareTag("Arrive"))
         {
             PostGameEffect();
+            proto_ui.Win();
+
+            int score;
+            score = stats.SendScore();
+            proto_ui.UpdateUI(score);
+
 
             //Debug.Log("Switch");
         }
@@ -368,7 +376,17 @@ public class ProtoPlayer : MonoBehaviour
 
             //Debug.Log("Switch");
         }
-        
+
+
+        if (collision.transform.CompareTag("Pièce"))
+        {
+            //
+            collision.transform.GetComponent<Pièce>().activeObject();
+            stats.AddComboAndScore(1);
+
+            Debug.Log("Pièce ramassé");
+        }
+
     }
 
 

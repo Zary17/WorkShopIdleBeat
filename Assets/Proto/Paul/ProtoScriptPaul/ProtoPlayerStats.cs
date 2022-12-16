@@ -5,10 +5,10 @@ using UnityEngine;
 public class ProtoPlayerStats : MonoBehaviour
 {
     //Score
-    int score;
+    [SerializeField] int score;
 
     //Combo
-    int combo;
+   [SerializeField] int combo;
     int comboMax;
 
     //Stats du joueur
@@ -36,4 +36,12 @@ public class ProtoPlayerStats : MonoBehaviour
     {
         //Besoin d'un écran de fin (GameOver ou fin de partie)
     }
+
+
+    public int SendScore()
+    {
+        return score;
+    }
+
+
 }

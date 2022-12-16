@@ -28,6 +28,8 @@ public class proto_UI : MonoBehaviour
 
     [SerializeField] GameObject postGame,buttonToPost;
     [SerializeField] GameObject GameOver,buttonToOver;
+
+    [SerializeField] Text txtScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,6 +83,7 @@ public class proto_UI : MonoBehaviour
     {
         postGame.SetActive(true);
         EventSystem.current.SetSelectedGameObject(buttonToPost);
+        UpdateUI()
     }
     
     
@@ -90,7 +93,11 @@ public class proto_UI : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(buttonToOver);
     }
 
+    public void UpdateUI(int score)
+    {
+        txtScore.text = score.ToString();
 
+    }
 
 
 }
