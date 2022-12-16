@@ -474,11 +474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 828539395424087784, guid: 152e8ee715c9f2a4a845cc18e60f22d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.499928
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 828539395424087784, guid: 152e8ee715c9f2a4a845cc18e60f22d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.6059997
+      value: -1.28
       objectReference: {fileID: 0}
     - target: {fileID: 828539395424087784, guid: 152e8ee715c9f2a4a845cc18e60f22d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -515,6 +515,10 @@ PrefabInstance:
     - target: {fileID: 828539395424087785, guid: 152e8ee715c9f2a4a845cc18e60f22d9, type: 3}
       propertyPath: m_Name
       value: Checkpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637010980586511280, guid: 152e8ee715c9f2a4a845cc18e60f22d9, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 152e8ee715c9f2a4a845cc18e60f22d9, type: 3}
